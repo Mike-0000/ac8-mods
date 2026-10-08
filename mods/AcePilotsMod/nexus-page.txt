@@ -6,7 +6,7 @@ Main file:      Ace-Pilots-0.1.0-Full.zip      name "Ace Pilots (complete)"   ve
 Optional file:  Ace-Pilots-0.1.0-ModOnly.zip   name "Ace Pilots (mod only, for an existing UE4SS)"
 
 === SUMMARY ===
-Tougher enemy pilots: higher pilot rank, smarter manoeuvres, more agile aircraft, more missiles. In-game menu (F6) and presets (F8). Copy two folders, set one launch option. Offline single player only.
+Tune enemy pilot rank, manoeuvre odds, aircraft agility and aggression with an in-game menu (F6) and six presets (F8). Complete download includes UE4SS; mod-only download is for an existing UE4SS setup. Offline single player only.
 
 === DESCRIPTION (BBCode) ===
 [size=5][b]Ace Pilots[/b][/size]
@@ -47,7 +47,7 @@ For a game that already runs UE4SS mods. Copy the [b]AcePilotsMod[/b] folder int
 [list]
 [*]On first start the mod is on the "All rank 5" preset and writes acepilots.ini into its folder.
 [*]Agility above 2 can make enemies overshoot.
-[*]Built for Steam build 25201480. On another build the native part stays off; pilot rank and the aggression switches still work.
+[*]Tested on Steam build 25201480. On another build the native part stays off; pilot rank and the aggression switches still work.
 [/list]
 
 [size=4][b]Going back online[/b][/size]
@@ -58,3 +58,6 @@ The mod contains one native DLL, acepilots_hook.dll. Its C++ source and build sc
 
 [size=4][b]Credits[/b][/size]
 [url=https://github.com/UE4SS-RE/RE-UE4SS]UE4SS[/url] by the UE4SS-RE team (MIT licence), included unmodified.
+
+The offline launch method was first published with "FOV Change" by 4598llj.
+All other mod work by michael319. MIT licence: https://github.com/Mike-0000/ac8-mods

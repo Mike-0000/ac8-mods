@@ -19,7 +19,7 @@ ACE COMBAT 8 has no field of view setting. This mod adds one for each camera vie
 [*][b]=[/b] and [b]-[/b] change the view you are in by 5 degrees. Each view remembers its own value
 [*][b]F10[/b] turns the mod on or off, [b]F9[/b] reloads the settings file. Keys and step size can be changed
 [*]Only acts in the three flight views. Menus and cutscenes are left alone
-[*]No installer and no launcher: two folders to copy, one launch option
+[*]Complete download includes UE4SS: copy two folders and set one launch option
 [/list]
 
 [size=4][b]Install (complete download)[/b][/size]
