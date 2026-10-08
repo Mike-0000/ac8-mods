@@ -1,0 +1,8 @@
+{
+  "folder": "AcePilotsMod",
+  "title": "Ace Pilots - Enemy AI Difficulty",
+  "version": "0.1.0",
+  "zip_name": "Ace-Pilots",
+  "user_files": ["acepilots.ini"],
+  "source_url": "https://github.com/Mike-0000/ac8-mods/tree/main/mods/AcePilotsMod/src"
+}

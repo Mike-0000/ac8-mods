@@ -1,0 +1,7 @@
+{
+  "folder": "FovMod",
+  "title": "Per-View FOV",
+  "version": "1.2.0",
+  "zip_name": "Per-View-FOV",
+  "user_files": ["fov.ini", "fov.state-a", "fov.state-b"]
+}

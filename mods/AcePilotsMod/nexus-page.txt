@@ -1,0 +1,60 @@
+=== NAME ===
+Ace Pilots - Enemy AI Difficulty
+
+=== FILES ===
+Main file:      Ace-Pilots-0.1.0-Full.zip      name "Ace Pilots (complete)"   version 0.1.0
+Optional file:  Ace-Pilots-0.1.0-ModOnly.zip   name "Ace Pilots (mod only, for an existing UE4SS)"
+
+=== SUMMARY ===
+Tougher enemy pilots: higher pilot rank, smarter manoeuvres, more agile aircraft, more missiles. In-game menu (F6) and presets (F8). Copy two folders, set one launch option. Offline single player only.
+
+=== DESCRIPTION (BBCode) ===
+[size=5][b]Ace Pilots[/b][/size]
+
+Makes enemy pilots fly and fight harder, with an in-game menu to choose how much. Everything is put back when a setting is turned off.
+
+[b]Offline single player only.[/b]
+
+[size=4][b]In game[/b][/size]
+[list]
+[*][b]F6[/b] opens the menu (mouse, arrow keys or gamepad)
+[*][b]F8[/b] steps through the presets: Off, All rank 5, Boosted 2, Boosted 3, Boosted 4, MAX
+[/list]
+
+[size=4][b]What you can change[/b][/size]
+[list]
+[*][b]Pilot skill[/b]: pilot rank for every enemy (5 is a named ace), how often they pick the manoeuvres better pilots use, how rarely they pick the lazy ones
+[*][b]Aircraft[/b]: turn rates and acceleration, missiles in the air per enemy, how long they hold a hard turn before blacking out
+[*][b]Aggression[/b]: no waiting for a turn to attack; flares, evasion and taunt manoeuvres allowed even where the mission had switched them off
+[*][b]Applies to[/b]: aircraft only or ground and sea units too, allies too, and from which game difficulty the manoeuvre odds change
+[*][b]Behaviour scripts[/b]: chance that a fighter type gets a harder behaviour script
+[/list]
+
+[size=4][b]Install (complete download)[/b][/size]
+[list=1]
+[*]Close the game. In Steam: right-click ACE COMBAT 8 > Manage > Browse local files.
+[*]Copy the [b]Game[/b] and [b]EasyAntiCheat[/b] folders from the zip into that folder. No game file is replaced.
+[*]In Steam: right-click ACE COMBAT 8 > Properties > General > Launch Options, and paste:
+[code]cmd /d /c "set EOS_USE_ANTICHEATCLIENTNULL=1&& %command% -anticheat_settings=AC8_Offline.json"[/code]
+[*]Start the game from Steam.
+[/list]
+Already use a launch option like this from another mod? Keep yours.
+
+[size=4][b]Install (mod only)[/b][/size]
+For a game that already runs UE4SS mods. Copy the [b]AcePilotsMod[/b] folder into your UE4SS Mods folder. Nothing to edit: it is enabled by its own enabled.txt.
+
+[size=4][b]Good to know[/b][/size]
+[list]
+[*]On first start the mod is on the "All rank 5" preset and writes acepilots.ini into its folder.
+[*]Agility above 2 can make enemies overshoot.
+[*]Built for Steam build 25201480. On another build the native part stays off; pilot rank and the aggression switches still work.
+[/list]
+
+[size=4][b]Going back online[/b][/size]
+The launch option starts the game without Easy Anti-Cheat. To play online, clear the launch option and delete Game\Binaries\Win64\dwmapi.dll.
+
+[size=4][b]Source[/b][/size]
+The mod contains one native DLL, acepilots_hook.dll. Its C++ source and build script: https://github.com/Mike-0000/ac8-mods/tree/main/mods/AcePilotsMod/src
+
+[size=4][b]Credits[/b][/size]
+[url=https://github.com/UE4SS-RE/RE-UE4SS]UE4SS[/url] by the UE4SS-RE team (MIT licence), included unmodified.

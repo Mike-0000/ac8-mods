@@ -1,0 +1,23 @@
+Set your own field of view for the cockpit, HUD-only and third-person cameras of
+ACE COMBAT 8. Change it while you fly; each view remembers its own value.
+
+IN GAME
+  =  and  -    widen / narrow the view you are in by 5 degrees
+  F10          switch the mod on or off
+  F9           reload fov.ini
+
+Nothing changes until you press = in flight or edit the settings.
+The game's own values: Cockpit 73.74, HUD 80, Third Person 61.93.
+
+SETTINGS
+  In the FovMod folder, copy defaults.ini to fov.ini and edit the copy.
+  Values are 40 to 150 degrees, or 0 to leave a view to the game. Keys and step size
+  are set there too; key changes need a game restart.
+
+GOOD TO KNOW
+  - The HUD overlay does not scale with the field of view, so the pitch ladder no
+    longer lines up exactly with the world at other values.
+  - The mod only acts in the three flight views. Menus and cutscenes are left alone.
+  - Do not run it together with another FOV mod: two mods writing the camera angle
+    make this one stand down for the session.
+  - Log: fovmod.log in the FovMod folder.

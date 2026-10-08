@@ -1,0 +1,57 @@
+=== FILES ===
+Main file:      Per-View-FOV-1.2.0-Full.zip      name "Per-View FOV (complete)"   version 1.2.0
+Optional file:  Per-View-FOV-1.2.0-ModOnly.zip   name "Per-View FOV (mod only, for an existing UE4SS)"
+Archive the two quarantined files (1.0.0 and 1.1.0-rc.1).
+
+=== SUMMARY ===
+Set FOV separately for cockpit, HUD-only and third-person cameras, with in-flight keys and saved values. Copy two folders, set one launch option. Offline single player only.
+
+=== DESCRIPTION (BBCode) ===
+[size=5][b]Per-View FOV[/b][/size]
+
+ACE COMBAT 8 has no field of view setting. This mod adds one for each camera view, adjustable while you fly.
+
+[b]Offline single player only.[/b]
+
+[size=4][b]Features[/b][/size]
+[list]
+[*]Separate field of view for [b]Cockpit[/b], [b]HUD[/b] (first person without cockpit) and [b]Third Person[/b], 40 to 150 degrees
+[*][b]=[/b] and [b]-[/b] change the view you are in by 5 degrees. Each view remembers its own value
+[*][b]F10[/b] turns the mod on or off, [b]F9[/b] reloads the settings file. Keys and step size can be changed
+[*]Only acts in the three flight views. Menus and cutscenes are left alone
+[*]No installer and no launcher: two folders to copy, one launch option
+[/list]
+
+[size=4][b]Install (complete download)[/b][/size]
+[list=1]
+[*]Close the game. In Steam: right-click ACE COMBAT 8 > Manage > Browse local files.
+[*]Copy the [b]Game[/b] and [b]EasyAntiCheat[/b] folders from the zip into that folder. No game file is replaced.
+[*]In Steam: right-click ACE COMBAT 8 > Properties > General > Launch Options, and paste:
+[code]cmd /d /c "set EOS_USE_ANTICHEATCLIENTNULL=1&& %command% -anticheat_settings=AC8_Offline.json"[/code]
+[*]Start the game from Steam.
+[/list]
+Already use a launch option like this from another mod? Keep yours.
+
+[size=4][b]Install (mod only)[/b][/size]
+For a game that already runs UE4SS mods. Copy the [b]FovMod[/b] folder into your UE4SS Mods folder. Nothing to edit: it is enabled by its own enabled.txt.
+
+[size=4][b]Settings[/b][/size]
+In the FovMod folder, copy defaults.ini to fov.ini and edit the copy. All views start at 0 (the game's own value), so nothing changes until you press [b]=[/b] in flight.
+Game defaults: Cockpit 73.74, HUD 80, Third Person 61.93.
+
+[size=4][b]Good to know[/b][/size]
+[list]
+[*]The HUD overlay does not scale with the field of view, so the pitch ladder no longer lines up exactly with the world at other values.
+[*]Do not run it together with another FOV mod.
+[*]Tested on Steam build 25201480.
+[/list]
+
+[size=4][b]Going back online[/b][/size]
+The launch option starts the game without Easy Anti-Cheat. To play online, clear the launch option and delete Game\Binaries\Win64\dwmapi.dll.
+
+[size=4][b]Credits[/b][/size]
+[list]
+[*][url=https://github.com/UE4SS-RE/RE-UE4SS]UE4SS[/url] by the UE4SS-RE team (MIT licence), included unmodified
+[*]4598llj (FOV Change) for first finding the per-view camera mechanism and publishing the offline launch method
+[/list]
+Source: https://github.com/Mike-0000/ac8-mods
