@@ -1,63 +1,59 @@
 === NAME ===
 Ace Pilots - Enemy AI Difficulty
 
-=== FILES ===
-Main file:      Ace-Pilots-0.1.0-Full.zip      name "Ace Pilots (complete)"   version 0.1.0
-Optional file:  Ace-Pilots-0.1.0-ModOnly.zip   name "Ace Pilots (mod only, for an existing UE4SS)"
-
 === SUMMARY ===
-Tune enemy pilot rank, manoeuvre odds, aircraft agility and aggression with an in-game menu (F6) and six presets (F8). Complete download includes UE4SS; mod-only download is for an existing UE4SS setup. Offline single player only.
+Tune enemy pilot rank, manoeuvre odds, aircraft agility and aggression with an in-game menu (F6) and six presets (F8). Complete download includes UE4SS; mod-only supports an existing setup. Offline single player only.
 
 === DESCRIPTION (BBCode) ===
 [size=5][b]Ace Pilots[/b][/size]
 
-Makes enemy pilots fly and fight harder, with an in-game menu to choose how much. Everything is put back when a setting is turned off.
+Makes enemy pilots in ACE COMBAT 8 fly and fight harder, with an in-game menu to choose how much. Settings are restored when turned off. Version 0.1.0.
 
 [b]Offline single player only.[/b]
 
-[size=4][b]In game[/b][/size]
+[size=4][b]In-game controls[/b][/size]
 [list]
-[*][b]F6[/b] opens the menu (mouse, arrow keys or gamepad)
-[*][b]F8[/b] steps through the presets: Off, All rank 5, Boosted 2, Boosted 3, Boosted 4, MAX
+[*][b]F6[/b] opens the menu. Use the mouse, arrow keys or gamepad; Esc closes it.
+[*][b]F8[/b] cycles six presets: Off, All rank 5, Boosted 2, Boosted 3, Boosted 4, MAX, with a preset banner.
 [/list]
 
 [size=4][b]What you can change[/b][/size]
 [list]
-[*][b]Pilot skill[/b]: pilot rank for every enemy (5 is a named ace), how often they pick the manoeuvres better pilots use, how rarely they pick the lazy ones
-[*][b]Aircraft[/b]: turn rates and acceleration, missiles in the air per enemy, how long they hold a hard turn before blacking out
-[*][b]Aggression[/b]: no waiting for a turn to attack; flares, evasion and taunt manoeuvres allowed even where the mission had switched them off
-[*][b]Applies to[/b]: aircraft only or ground and sea units too, allies too, and from which game difficulty the manoeuvre odds change
-[*][b]Behaviour scripts[/b]: chance that a fighter type gets a harder behaviour script
+[*][b]Pilot skill[/b]: enemy pilot rank (5 is a named ace), how often pilots choose skilled manoeuvres and how rarely they choose lazy ones.
+[*][b]Aircraft[/b]: turn rates and acceleration, missiles in the air per enemy, and how long pilots hold hard turns before blacking out.
+[*][b]Aggression[/b]: remove waiting for a turn to attack; allow flares, evasion and taunt manoeuvres where the mission disabled them.
+[*][b]Scope[/b]: aircraft only or ground and sea units too; optionally allies; the game difficulty at which manoeuvre changes start.
+[*][b]Behaviour scripts[/b]: the chance a fighter type receives a harder behaviour script.
 [/list]
 
-[size=4][b]Install (complete download)[/b][/size]
+[size=4][b]Install - complete download[/b][/size]
+Includes UE4SS unmodified. No separate mod requirement. Use this download if you do not already have UE4SS installed.
 [list=1]
-[*]Close the game. In Steam: right-click ACE COMBAT 8 > Manage > Browse local files.
-[*]Copy the [b]Game[/b] and [b]EasyAntiCheat[/b] folders from the zip into that folder. No game file is replaced.
-[*]In Steam: right-click ACE COMBAT 8 > Properties > General > Launch Options, and paste:
+[*]Close the game. In Steam, right-click ACE COMBAT 8 > Manage > Browse local files.
+[*]Copy the [b]Game[/b] and [b]EasyAntiCheat[/b] folders from the zip into the game folder.
+[*]In Steam > Properties > General > Launch Options, paste this exact line:
 [code]cmd /d /c "set EOS_USE_ANTICHEATCLIENTNULL=1&& %command% -anticheat_settings=AC8_Offline.json"[/code]
-[*]Start the game from Steam.
+[*]Start the game from Steam and use offline single-player modes.
 [/list]
-Already use a launch option like this from another mod? Keep yours.
 
-[size=4][b]Install (mod only)[/b][/size]
-For a game that already runs UE4SS mods. Copy the [b]AcePilotsMod[/b] folder into your UE4SS Mods folder. Nothing to edit: it is enabled by its own enabled.txt.
+[size=4][b]Install - mod only[/b][/size]
+For an existing UE4SS installation with offline launch already configured, copy the [b]AcePilotsMod[/b] folder into your UE4SS Mods folder. Its enabled.txt enables it; no mods.txt edit is needed. Keep the offline launch option above.
 
-[size=4][b]Good to know[/b][/size]
+[size=4][b]Settings and limitations[/b][/size]
 [list]
-[*]On first start the mod is on the "All rank 5" preset and writes acepilots.ini into its folder.
+[*]Until acepilots.ini exists, the mod starts on All rank 5 and writes the settings file in its folder. Menu changes save automatically. File edits are picked up within a second.
 [*]Agility above 2 can make enemies overshoot.
-[*]Tested on Steam build 25201480. On another build the native part stays off; pilot rank and the aggression switches still work.
+[*]Tested on Steam build [b]25201480[/b]. On a different build the native part stays off when game code differs; pilot rank and aggression switches still work.
+[*]Log: acepilots.log in the AcePilotsMod folder.
 [/list]
 
 [size=4][b]Going back online[/b][/size]
-The launch option starts the game without Easy Anti-Cheat. To play online, clear the launch option and delete Game\Binaries\Win64\dwmapi.dll.
+Clear the Steam launch option and delete [b]Game\Binaries\Win64\dwmapi.dll[/b] before going online. The launch option above starts the game without Easy Anti-Cheat.
 
 [size=4][b]Source[/b][/size]
-The mod contains one native DLL, acepilots_hook.dll. Its C++ source and build script: https://github.com/Mike-0000/ac8-mods/tree/main/mods/AcePilotsMod/src
+The mod contains one native DLL, [b]acepilots_hook.dll[/b], built from this [url=https://github.com/Mike-0000/ac8-mods/tree/main/mods/AcePilotsMod/src]C++ source and build script[/url] using the Visual Studio 2022 C++ build tools.
 
-[size=4][b]Credits[/b][/size]
+[size=4][b]Credits and permissions[/b][/size]
 [url=https://github.com/UE4SS-RE/RE-UE4SS]UE4SS[/url] by the UE4SS-RE team (MIT licence), included unmodified.
-
 The offline launch method was first published with "FOV Change" by 4598llj.
-All other mod work by michael319. MIT licence: https://github.com/Mike-0000/ac8-mods
+All other mod work by michael319, under the MIT licence. Retain the included licence notices when redistributing. [url=https://github.com/Mike-0000/ac8-mods]Repository[/url]
